@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Mental Support ChatBot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Instructions Section -->
+        <div class="instructions">
+            <h3>How It Works?</h3>
+            <p>
+                Welcome to the Online Mental Support ChatBot. This chatbot is designed to help you manage and address your feelings in difficult moments.
+                You can type emotions like "sad", "anxious", "stressed", "angry", "fear", "unhappy", "bored", "upset", "stressed", etc. and the chatbot will provide helpful suggestions and resources.
+            </p>
+            <p>Instructions:</p>
+            <ol>
+                <li>Type an emotion like "sad", "anxious", "nervous", etc.</li>
+                <li>Receive helpful suggestions or guidance based on the selected emotion.</li>
+                <li>If unsure, ask for help or start with a greeting like "Hi".</li>
+            </ol>
+        </div>
+
+        <!-- ChatBot Section -->
+        <div class="chatbot-container">
+            <div class="chat-header">
+                <h2>You have the power over your emotions; it's time to help yourself.</h2>
+            </div>
+            <div id="chat-box" class="chat-box"></div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Enter your message...">
+                <button id="send-btn" class="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
